@@ -9,15 +9,15 @@ object main {
 			require(n >= 2)
 
 			def rec(i: Int, primes: List[Int]): List[Int] = {
-				if (primes.length > n) primes
+				if (primes.length == n) primes
 				else if (prime(i, primes)) rec(i + 1, i :: primes)
 				else rec(i + 1, primes)
 			}
 
 			rec(2, List())
 		}
-		println(primes(10001)(1));
-		
+		println(primes(10001)(0));
+
 	}
 
 }
